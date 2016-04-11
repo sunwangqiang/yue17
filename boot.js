@@ -6,9 +6,9 @@ var fs = require('fs');
 
 module.exports = function(app, options){
     var verbose = options.verbose;
-    fs.readdirSync(__dirname + '/busyness').forEach(function(name){
+    fs.readdirSync(__dirname + '/business').forEach(function(name){
 
-        var obj = require(__dirname+'/busyness/' + name + '/controller.js');
+        var obj = require(__dirname+'/business/' + name + '/controller.js');
         var prefix = obj.prefix || '/';
         var entry = obj.entry || name;
 
